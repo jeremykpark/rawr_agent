@@ -27,8 +27,8 @@ async def rawr_image_extractor_function(
     config: rawrImageExtractorFunctionConfig, builder: Builder
 ):
     # Implement your function logic here
-    async def _response_fn(context: str, image_source: str) -> str:
-        # Encode the image provided
+    async def _response_fn(context: str, image_source: str="img/birthday-party-flyer.jpg") -> str:
+        # Encode the image provided url - if no image provided, use the included birthday party flyer
         image_data_url = encode_image(image_source)
         
         # Prepare the data for sending to the LLM
