@@ -82,7 +82,8 @@ The default setup is to read this included sample file and create a report on th
 ## 🧩 Template System
 
 Reports are powered by **[Report Creator](https://report-creator.readthedocs.io/en/latest/api.html)** by Daren Ace.  
-Create new templates in `report_templates/` and call them by name—no code changes required.
+Create new templates in `report_templates/`. Set them up in rawr_report_template.py to call them by name.
+Generated reports are saved to /report_exports as an HTML file.
 
 ---
 
