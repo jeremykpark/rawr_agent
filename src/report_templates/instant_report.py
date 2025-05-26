@@ -2,6 +2,9 @@ import report_creator as rc
 import plotly.express as px
 import json
 
+# Generate a RAWR instant report using the code below
+# made with Report Creator by Daren Ace see documentation here: https://report-creator.readthedocs.io/en/latest/api.html
+
 def generate_instant_report():
     #json_data = [json.loads(item) for item in json_data]
     

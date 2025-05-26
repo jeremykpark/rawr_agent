@@ -14,12 +14,6 @@ You can have multiple templates for different types of reports, as defined by on
 
 This is a starter workflow, for you to build your own RAWR Agent using Nvidia AIQ, customized for your requirements. This template starts your agent with the basics for reading from images and writing a report, and whatever you logic you'd like to put in between is yours to discover. For more information on Nvidia Agent IQ visit: https://github.com/NVIDIA/AIQToolkit
 
-The template system included is Report Creator by Daren Ace see documentation here: https://report-creator.readthedocs.io/en/latest/api.html
-
-This was created as a submission for the Nvidia AIQ Hackathon contest https://developer.nvidia.com/agentiq-hackathon
-
-This is a public repo, feel free to submit issues or improvements, would like to make this kickoff template even better.
-
 🦕 Getting Started 🦕
 
 a. Install AIQToolkit - https://docs.nvidia.com/aiqtoolkit/latest/quick-start/installing.html
@@ -45,5 +39,11 @@ Nvidia UI prompt tool calling
 Report Export from browser
 
 🏞️⛰️🦕⛰️🌋
+
+The template system included is Report Creator by Daren Ace see documentation here: https://report-creator.readthedocs.io/en/latest/api.html
+
+This was created as a submission for the Nvidia AIQ Hackathon contest https://developer.nvidia.com/agentiq-hackathon
+
+This is a public repo, feel free to submit issues or improvements, would like to make this kickoff template even better.
 
 "Ah, now eventually you do plan to have dinosaurs on your, on your dinosaur tour, right? Hello?" — Ian Malcolm, Jurassic Park 

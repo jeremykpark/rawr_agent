@@ -1,6 +1,9 @@
 import report_creator as rc
 import plotly.express as px
 
+# Generate a RAWR monthly report using the code below
+# made with Report Creator by Daren Ace see documentation here: https://report-creator.readthedocs.io/en/latest/api.html
+
 def generate_monthly_report():
     with rc.ReportCreator(
             title="Monthly Report",
