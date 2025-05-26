@@ -1,0 +1,16 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools >= 64"]
+
+[project]
+name = "rawr_agent"
+version = "0.1.0"
+dependencies = [
+  "aiqtoolkit[langchain]",
+]
+requires-python = ">=3.11,<3.13"
+description = "Read and Write Report (RAWR) Agent"
+classifiers = ["Programming Language :: Python"]
+
+[project.entry-points.'aiq.components']
+rawr_agent = "rawr_agent.register"

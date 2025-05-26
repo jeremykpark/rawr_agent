@@ -1,0 +1,39 @@
+general:
+  use_uvloop: true
+  logging:
+    console:
+      _type: console
+      level: WARN
+
+  front_end:
+    _type: fastapi
+
+  front_end:
+    _type: console
+
+functions: 
+  rawr_agent_function:
+    _type: rawr_agent_function
+  rawr_flyer_image_extractor:
+    _type: rawr_image_extractor
+    llm_name: nim_llm
+  rawr_report_templates:
+    _type: rawr_report_templates
+
+llms:
+  nim_llm:
+    _type: nim
+    model_name: mistralai/mistral-medium-3-instruct
+    temperature: 0.0
+    max_tokens: 1024
+
+workflow:
+  _type: tool_calling_agent
+  tool_names:
+    - rawr_agent_function
+    - rawr_flyer_image_extractor
+    - rawr_report_templates
+  llm_name: nim_llm
+  vebose: true
+  retry_parsing_errors: true
+  max_retries: 3

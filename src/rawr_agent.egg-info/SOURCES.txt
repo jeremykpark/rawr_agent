@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/rawr_agent/__init__.py
+src/rawr_agent/rawr_agent_function.py
+src/rawr_agent/rawr_image_extractor.py
+src/rawr_agent/rawr_report_templates.py
+src/rawr_agent/register.py
+src/rawr_agent.egg-info/PKG-INFO
+src/rawr_agent.egg-info/SOURCES.txt
+src/rawr_agent.egg-info/dependency_links.txt
+src/rawr_agent.egg-info/entry_points.txt
+src/rawr_agent.egg-info/requires.txt
+src/rawr_agent.egg-info/top_level.txt
+src/report_templates/instant_report.py
+src/report_templates/monthly_report.py

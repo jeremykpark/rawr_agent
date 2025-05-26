@@ -1,0 +1,2 @@
+[aiq.components]
+rawr_agent = rawr_agent.register
