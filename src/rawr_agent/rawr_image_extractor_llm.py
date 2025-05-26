@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class rawrImageExtractorFunctionConfig(FunctionBaseConfig, name="rawr_image_extractor_llm"):
     """
-    Extracts data from images as json data. Json schema is based on prompt provided.
+    Extracts data from images as json data using an vision enabled LLM. Json schema should be in prompt provided.
     """
     # Add your custom configuration parameters here
     parameter: str = Field(default="default_value", description="Notional description for this parameter")

@@ -97,7 +97,7 @@ Create new templates in `report_templates/` and call them by name—no code chan
 
 ## 🏗️ Build Your Own RAWR
 
-This repo is deliberately minimal. Insert your own logic between **read** (LLM vision) and **write** (HTML report):
+This repo is deliberately minimal and is to be used as scaffolding for your own projects. Insert your own logic between **read** (LLM vision) and **write** (HTML report):
 
 ```mermaid
 graph LR

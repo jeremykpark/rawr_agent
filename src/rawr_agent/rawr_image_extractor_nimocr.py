@@ -20,7 +20,7 @@ class rawrImageExtractorNimOCRFunctionConfig(FunctionBaseConfig, name="rawr_imag
     """
     Extracts data from images as json data using PaddleOCR NIM
     
-    Use only if explicitly asked to use a local ocr or paddleocr
+    Use only if explicitly asked to use local ocr or paddleocr or nim ocr
     """
     # Add your custom configuration parameters here
     parameter: str = Field(default="default_value", description="Notional description for this parameter")
@@ -34,7 +34,8 @@ async def rawr_image_extractor_nimocr_function(
         # Encode the image provided url - if no image provided, use the included birthday party flyer
         output_gen = run_ocr()
 
-        return json.loads(output_gen)
+        return output_gen
+    
     try:
         yield FunctionInfo.from_fn(_response_fn, description="    Extracts data from images as json data with PaddleOCR NIM.")
     except GeneratorExit:
@@ -103,7 +104,7 @@ def extract_text(image_data_url, api_endpoint):
 
 def run_ocr():
      # Process the same sample image used in the cURL example
-    image_source = "../../img/birthday-party-flyer.jpg"
+    image_source = "img/birthday-party-flyer.jpg"
     # Also works with local files
     # image_source = "path/to/your/image.jpg"
     api_endpoint = "http://localhost:8010"

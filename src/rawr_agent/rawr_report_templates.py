@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class rawrReportTemplatesFunctionConfig(FunctionBaseConfig, name="rawr_report_templates"):
     """
-    A function for generating pre-defined reports from json data.
+    A function for generating pre-defined reports from json data using Report Creator https://report-creator.readthedocs.io/en/latest/
     Which report to generate is determined by the report_type parameter when calling the function.
     The reports are defined in the report_templates directory.
     """
