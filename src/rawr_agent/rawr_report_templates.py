@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class rawrReportTemplatesFunctionConfig(FunctionBaseConfig, name="rawr_report_templates"):
     """
-    A function for generating pre-defined reports from json data using Report Creator https://report-creator.readthedocs.io/en/latest/
+    A function to generate reports from  data using Report Creator https://report-creator.readthedocs.io/en/latest/
     Which report to generate is determined by the report_type parameter when calling the function.
     The reports are defined in the report_templates directory.
     """
@@ -27,22 +27,23 @@ async def rawr_report_templates_function(
     config: rawrReportTemplatesFunctionConfig, builder: Builder
 ):
     # Implement your function logic here
-    async def _response_fn(report_type: str, json_data: str) -> str:
+    async def _response_fn(report_type: str, data: str) -> str:
         # Process the input_message and generate output
-        #json_str = json.dumps(json_data)
+        #json_data = json.dumps(json_str)
         
         # Create a report based on the report_type
-        if report_type == "instant_report":
-            # A report that provides details about new events
-            from .report_templates.instant_report import generate_instant_report
-            report_output = generate_instant_report()
-            report_output[0].save(report_output[1], "report_exports/report.html")
-            
-        elif report_type == "monthly_report":
-            # A report that provides details about the monthly activities
-            from .report_templates.monthly_report import generate_monthly_report
-            report_output = generate_monthly_report()
-            report_output[0].save(report_output[1], "report_exports/report.html")
+        match report_type:
+            case "instant_report":
+                # A report that provides details about new events
+                from report_templates.instant_report import generate_instant_report
+                report_output = generate_instant_report(data)
+                report_output[0].save(report_output[1], "report_exports/report.html")
+                
+            case "weekly_report" | "monthly_report":
+                # A report that provides details about the monthly activities
+                from report_templates.monthly_report import generate_monthly_report
+                report_output = generate_monthly_report(data)
+                report_output[0].save(report_output[1], "report_exports/report.html")
 
         try:
             report_output

@@ -12,7 +12,7 @@
 | **Image → JSON** | Uses a vision enabled LLM (default: `build.nvidia.com`, easily swappable for OpenAI, etc.) to “look” at an image and answer with JSON. Also includes example scripts for running a PaddleOCR NIM docker container, for more sensitive applications, where an external LLM is not possible.|
 | **Template‑driven reports** | **Report Creator** renders the JSON into eye‑catching HTML via the templates in `report_templates/`. |
 | **One‑call flexibility** | For multiple report types, you can pick any custom pre-setup template just by passing its name in a single function‑call parameter. |
-| **Batteries included** | Works as a complete [AIQ](https://github.com/NVIDIA/AIQToolkit) workflow, built to be a scaffolding so you can extend the logic between llm “read” and report “write.”  |
+| **Batteries included** | Works as a complete [AIQ](https://github.com/NVIDIA/AIQToolkit) workflow, built to be a scaffolding so you can extend the logic between a basic example of vision llm “read” and report “write.”  For instance, add an MCP extend analysis of the vision data, before writing the report. |
 
 ---
 
@@ -76,6 +76,8 @@
 The default setup is to read this included sample file and create a report on the data inside.
 
 <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="20%" height="20%">
+
+<img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/report_demo.png" alt="Sample Report" width="20%" height="20%">
 
 ---
 
