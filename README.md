@@ -110,7 +110,7 @@ graph LR
 
 ## 🌋 Contributing / Issues
 
-It’s a public repo—PRs & issues are welcome! Let’s make this starter template an **even bigger dinosaur**.
+It’s a public repo—PRs & issues are welcome! Let’s make this starter template an **even louder RAWR**.
 
 > “Ah, now eventually you do plan to have dinosaurs on your, on your dinosaur tour, right? Hello?” — **Dr. Ian Malcolm**
 
