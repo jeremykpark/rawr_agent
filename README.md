@@ -77,7 +77,12 @@
 |------------------------|-----------------------|
 | _<screenshot placeholder>_ | _<screenshot placeholder>_ |
 
-Sample Flyer Included <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="30%" height="30%">
+
+---
+
+## 🖼️ Sample Flyer Included
+
+<img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="30%" height="30%">
 
 ---
 
