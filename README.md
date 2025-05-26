@@ -6,13 +6,13 @@
 🦖 READ AND WRITE REPORT (RAWR) Agent 🦖
 an Nvidia AIQ Workflow template by Jeremy K
 
-Uses the Nvidia AIQ toolkit to ask an LLM to review an image from the internet url or a local file, and extract the json data out of it using a prompt of your choosing. The extracted data is then used to write a custom report using the Report Creator template system, displaying the data in a single file html readable format.
+Uses the Nvidia AIQ toolkit to ask an LLM to review an image from the internet url or a local file, and extract the json data out of it using a prompt of your choosing. Another tool writes a custom report from json, using the Report Creator template system, displaying the data in a single file html readable format.
 
 The function calling and image data extraction uses an LLM from build.nvidia.com, but can also be setup to use other providers like OpenAI.
 
 You can have multiple templates for different types of reports, as defined by one function call parameter. You create visually appealing html reports with Report Creator, that are generated from files in the report_templates folder.
 
-This is a starter workflow, for you to build your own RAWR Agent using Nvidia AIQ, customized for your requirements. This template starts your agent with the basics for reading from images and writing a report, and whatever you logic you'd like to put in between is yours to discover. For more information on Nvidia Agent IQ visit: https://github.com/NVIDIA/AIQToolkit
+This is a starter workflow, for you to build your own RAWR Agent using Nvidia AIQ, customized for your requirements. This template starts your agent with the basics for reading images with an llm, and writing a report. Whatever you logic you'd like to put in between is yours to discover. For more information on Nvidia Agent IQ visit: https://github.com/NVIDIA/AIQToolkit
 
 
 🦕 GETTING STARTED 🦕
