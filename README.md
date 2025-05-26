@@ -77,7 +77,7 @@
 |------------------------|-----------------------|
 | _<screenshot placeholder>_ | _<screenshot placeholder>_ |
 
-Sample Flyer Included ![Screenshot](https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg)
+Sample Flyer Included <img src="https://example.com/path/to/image.png" alt="Alt text" width="30%" height="30%">
 
 ---
 
