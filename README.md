@@ -71,15 +71,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Prompting in NVIDIA UI | Generated HTML Report |
-|------------------------|-----------------------|
-| _<screenshot placeholder>_ | _<screenshot placeholder>_ |
-
-
----
-
 ## 🖼️ Sample Flyer Included
 
 The default setup is to read this included sample file and create a report on the data inside.
