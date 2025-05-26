@@ -1,3 +1,5 @@
+# This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
+
 # Choose a container name for bookkeeping
 export NIM_MODEL_NAME=baidu/paddleocr
 export CONTAINER_NAME=$(basename $NIM_MODEL_NAME)
@@ -17,5 +19,5 @@ docker run -it --rm --name=$CONTAINER_NAME \
   -e NGC_API_KEY \
   -v "$LOCAL_NIM_CACHE:/opt/nim/.cache" \
   -u $(id -u) \
-  -p 8000:8000 \
+  -p 8010:8000 \
   $IMG_NAME

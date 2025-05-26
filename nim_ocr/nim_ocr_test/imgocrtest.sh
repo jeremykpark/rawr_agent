@@ -1,7 +1,10 @@
-API_ENDPOINT="http://localhost:8000"
+# This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
+
+API_ENDPOINT="http://localhost:8010"
 
 # Create JSON payload with base64 encoded image
-IMAGE_SOURCE="./unnamed-13.jpg"
+
+IMAGE_SOURCE="../../img/birthday-party-flyer.jpg"
 # IMAGE_SOURCE="path/to/your/image.jpg"  # Uncomment to use a local file instead
 
 # Encode the image to base64 (handles both URLs and local files)

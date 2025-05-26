@@ -14,11 +14,14 @@ general:
 functions: 
   rawr_agent_function:
     _type: rawr_agent_function
-  rawr_flyer_image_extractor:
-    _type: rawr_image_extractor
+  rawr_image_extractor_llm:
+    _type: rawr_image_extractor_llm
     llm_name: nim_llm
+  rawr_image_extractor_nimocr:
+    _type: rawr_image_extractor_nimocr
   rawr_report_templates:
     _type: rawr_report_templates
+
 
 llms:
   nim_llm:
@@ -31,7 +34,8 @@ workflow:
   _type: tool_calling_agent
   tool_names:
     - rawr_agent_function
-    - rawr_flyer_image_extractor
+    - rawr_image_extractor_llm
+    - rawr_image_extractor_nimocr
     - rawr_report_templates
   llm_name: nim_llm
   vebose: true

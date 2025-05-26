@@ -1,11 +1,48 @@
 # This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
-
-import requests
+import logging
 import base64
+import requests
 import json
-import io
-from PIL import Image, ImageDraw
 
+from pydantic import Field
+
+from aiq.builder.builder import Builder
+from aiq.builder.function_info import FunctionInfo
+from aiq.builder.framework_enum import LLMFrameworkEnum
+from aiq.cli.register_workflow import register_function
+from aiq.data_models.function import FunctionBaseConfig
+from aiq.data_models.component_ref import LLMRef
+
+logger = logging.getLogger(__name__)
+
+
+class rawrImageExtractorNimOCRFunctionConfig(FunctionBaseConfig, name="rawr_image_extractor_nimocr"):
+    """
+    Extracts data from images as json data using PaddleOCR NIM
+    
+    Use only if explicitly asked to use a local ocr or paddleocr
+    """
+    # Add your custom configuration parameters here
+    parameter: str = Field(default="default_value", description="Notional description for this parameter")
+
+@register_function(config_type=rawrImageExtractorNimOCRFunctionConfig)
+async def rawr_image_extractor_nimocr_function(
+    config: rawrImageExtractorNimOCRFunctionConfig, builder: Builder
+):
+    # Implement your function logic here
+    async def _response_fn(input_message: str) -> str:
+        # Encode the image provided url - if no image provided, use the included birthday party flyer
+        output_gen = run_ocr()
+
+        return json.loads(output_gen)
+    try:
+        yield FunctionInfo.from_fn(_response_fn, description="    Extracts data from images as json data with PaddleOCR NIM.")
+    except GeneratorExit:
+        print("Function exited early!")
+    finally:
+        print("Cleaning up rawr_event_admin workflow.") 
+        
+                              
 def encode_image(image_source):
     """
     Encode an image to base64 data URL.
@@ -64,52 +101,8 @@ def extract_text(image_data_url, api_endpoint):
     response.raise_for_status()
     return response.json()
 
-
-def visualize_text_detections(image_data, result, output_path):
-    """
-    Draw bounding boxes on the image based on API results.
-    """
-    # Load image from data URL or URL
-    if image_data.startswith('data:'):
-        # Extract base64 data after the comma
-        b64_data = image_data.split(',')[1]
-        image_bytes = base64.b64decode(b64_data)
-        image = Image.open(io.BytesIO(image_bytes))
-    else:
-        # Download from URL
-        response = requests.get(image_data)
-        image = Image.open(io.BytesIO(response.content))
-
-    draw = ImageDraw.Draw(image)
-
-    # Get image dimensions
-    width, height = image.size
-
-    # Draw detected elements
-    for detection in result["data"]:
-        for text_detection in detection["text_detections"]:
-            box = text_detection["bounding_box"]["points"]
-            # Convert normalized coordinates to pixels
-            x_min = int(min([point["x"] for point in box]) * width)
-            y_min = int(min([point["y"] for point in box]) * height)
-            x_max = int(max([point["x"] for point in box]) * width)
-            y_max = int(max([point["y"] for point in box]) * height)
-
-            # Draw rectangle
-            draw.rectangle([x_min, y_min, x_max, y_max], outline="blue", width=3)
-
-            # Add label with confidence
-            label = f"{text_detection['text_prediction']['text']}: {text_detection['text_prediction']['confidence']:.2f}"
-            draw.text((x_min, y_min-15), label, fill="blue")
-
-    # Save the annotated image
-    image.save(output_path)
-    print(f"Annotated image saved to {output_path}")
-
-
-# Example usage
-if __name__ == "__main__":
-    # Process the same sample image used in the cURL example
+def run_ocr():
+     # Process the same sample image used in the cURL example
     image_source = "../../img/birthday-party-flyer.jpg"
     # Also works with local files
     # image_source = "path/to/your/image.jpg"
@@ -122,12 +115,10 @@ if __name__ == "__main__":
 
         # Detect elements
         result = extract_text(image_data_url, api_endpoint)
-        #print(json.dumps(result, indent=2))
-
-        # Visualize the results
-        #visualize_text_detections(image_data_url, result, output_path)
+        return result
+        #return json.dumps(result, indent=2)
 
     except requests.exceptions.RequestException as e:
-        print(f"API request failed: {e}")
+        return "API request failed: {e}"
     except Exception as e:
-        print(f"Error: {e}")
+        return "Error: {e}"

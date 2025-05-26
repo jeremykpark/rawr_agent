@@ -2,7 +2,8 @@ README.md
 pyproject.toml
 src/rawr_agent/__init__.py
 src/rawr_agent/rawr_agent_function.py
-src/rawr_agent/rawr_image_extractor.py
+src/rawr_agent/rawr_image_extractor_llm.py
+src/rawr_agent/rawr_image_extractor_nimocr.py
 src/rawr_agent/rawr_report_templates.py
 src/rawr_agent/register.py
 src/rawr_agent.egg-info/PKG-INFO

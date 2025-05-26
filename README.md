@@ -77,7 +77,7 @@
 |------------------------|-----------------------|
 | _<screenshot placeholder>_ | _<screenshot placeholder>_ |
 
-> _Drop your own screenshots in `/docs/img/` and update the table!_
+Sample Flyer Included ![Screenshot](https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg)
 
 ---
 

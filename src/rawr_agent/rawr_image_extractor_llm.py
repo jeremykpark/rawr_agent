@@ -1,3 +1,4 @@
+# This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
 import logging
 import base64
 import requests
@@ -14,7 +15,7 @@ from aiq.data_models.component_ref import LLMRef
 logger = logging.getLogger(__name__)
 
 
-class rawrImageExtractorFunctionConfig(FunctionBaseConfig, name="rawr_image_extractor"):
+class rawrImageExtractorFunctionConfig(FunctionBaseConfig, name="rawr_image_extractor_llm"):
     """
     Extracts data from images as json data. Json schema is based on prompt provided.
     """
@@ -23,7 +24,7 @@ class rawrImageExtractorFunctionConfig(FunctionBaseConfig, name="rawr_image_extr
     llm_name: LLMRef = Field(description="LLM to use for extracting data from images")
 
 @register_function(config_type=rawrImageExtractorFunctionConfig, framework_wrappers=[LLMFrameworkEnum.LANGCHAIN])
-async def rawr_image_extractor_function(
+async def rawr_image_extractor_llm_function(
     config: rawrImageExtractorFunctionConfig, builder: Builder
 ):
     # Implement your function logic here
