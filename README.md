@@ -64,7 +64,7 @@
    ```
 
 7. **Open your browser at** <http://localhost:3000>  
-   *Start chatting; watch the server terminals for logs/errors.*
+   *Start chatting - test with one of the prompts in README_prompt_suggestions.md; watch the server terminals for logs/errors.*
 
 8. **Go RAWR in the jungle**  
    Point the agent at any image and enjoy the auto‑generated reports in `report_exports/` (self‑contained interactive HTML).
