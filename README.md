@@ -33,13 +33,14 @@
    git clone https://github.com/jeremykpark/rawr_agent.git
    ```
 
+> _Assumes you already have Python 3.9 + and `uv` or `pip` handy._
+
 3. **Install AIQToolkit**  
    ```bash
    Create a new .venv environment and Install AIQTOOLKIT
    #  follow the official AIQToolkit setup guide :
    #  https://docs.nvidia.com/aiqtoolkit/latest/quick-start/installing.html
    ```
-   > _Assumes you already have Python 3.9 + and `uv` or `pip` handy._
 
 4. **Register this workflow with AIQ**  
    ```bash
