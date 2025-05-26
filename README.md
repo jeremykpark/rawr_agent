@@ -18,44 +18,54 @@
 
 ## 🦕 Getting Started
 
-> _Assumes you already have Python 3.9 + and `uv` or `pip` handy._
-
-1. **Install AIQToolkit**  
+1. **Download AIQToolkit**
    ```bash
-   pip install aiqtoolkit
-   # or follow the official guide:
+   mkdir -p ~/<your‑AIQtoolkit‑dir>
+   git clone https://github.com/NVIDIA/AIQToolkit
+   #  for local dev we install in WSL in ~/aiqtoolkit 
+   ```
+
+2. **Clone or fork this AgentIQ Workflow**  
+   ```bash
+   cd <your‑AIQtoolkit‑dir>
+   mkdir -p ~/<your‑AIQtoolkit‑dir>/workflows
+   cd workflows
+   git clone https://github.com/jeremykpark/rawr_agent.git
+   ```
+
+3. **Install AIQToolkit**  
+   ```bash
+ Create a new .venv environment and Install AIQTOOLKIT
+   # follow the official AIQToolkit setup guide :
    # https://docs.nvidia.com/aiqtoolkit/latest/quick-start/installing.html
    ```
+> _Assumes you already have Python 3.9 + and `uv` or `pip` handy._
 
-2. **Clone or copy this workflow**  
+4. **Register this workflow with AIQ**  
    ```bash
-   cd <your‑projects‑dir>
-   git clone https://github.com/<you>/rawr_agent.git
-   mkdir -p ~/.aiqtoolkit/workflows
-   cp -r rawr_agent ~/.aiqtoolkit/workflows/
-   ```
-
-3. **Editable install (so code changes hot‑reload)**  
-   ```bash
-   cd ~/.aiqtoolkit/workflows/rawr_agent
+   cd ~/<your‑AIQtoolkit‑dir>/workflows/rawr_agent
    uv pip install -e .
    ```
 
-4. **Launch the workflow server**  
+5. **Launch the workflow server from the workflow root dir**  
    ```bash
+    cd ~/<your‑AIQtoolkit‑dir>/workflows/rawr_agent
    aiq serve --config_file configs/config.yml
    ```
 
-5. **Launch the AIQ UI in a separate terminal**  
+6. **Launch the AIQ UI in a separate terminal**  
    ```bash
-   aiq ui
+   cd ~/<your‑AIQtoolkit‑dir>/external/aiqtoolkit-opensource-ui
+   npm dev start
+
+   # follow the official AIQ UI setup guide first - NPM version v18.17.0 or new required:
    # Ref: https://docs.nvidia.com/aiqtoolkit/latest/quick-start/launching-ui.html
    ```
 
-6. **Open your browser at** <http://localhost:3000>  
+7. **Open your browser at** <http://localhost:3000>  
    *Start chatting; watch the server terminals for logs/errors.*
 
-7. **Go RAWR in the jungle**  
+8. **Go RAWR in the jungle**  
    Point the agent at any image and enjoy the auto‑generated reports in `report_exports/` (self‑contained interactive HTML).
 
 ---
