@@ -1,7 +1,7 @@
 # 🦖 **RAWR Agent – _Read And Write Report_**  
 *A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** 
 
-> **TL;DR** Point the agent at an image (URL or local file) → ask your preferred LLM to extract structured JSON → pipe that JSON into **Report Creator** by **Daren Ace*** templates → instantly get a polished, single‑file HTML report.
+> **TL;DR** Point the agent at an image (URL or local file) → ask your preferred LLM to extract structured JSON → pipe that JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
 
 ---
 
