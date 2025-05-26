@@ -75,7 +75,7 @@
 
 The default setup is to read this included sample file and create a report on the data inside.
 
-| <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="20%" height="20%"> | <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/report_demo.png" alt="Sample Report" width="20%" height="20%"> |
+| <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="20%" height="20%"> | <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/report_demo.png" alt="Sample Report" width="30%" height="20%"> |
 
 ---
 
