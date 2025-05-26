@@ -1,7 +1,7 @@
 # 🦖 **RAWR Agent – _Read And Write Report_**  
 *A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** 
 
-> **TL;DR** Point the agent at an image (URL or local file) → ask your preferred LLM to extract structured JSON → pipe that JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
+> **TL;DR** Access the Nvidia AgentIQ chat UI locally, to prompt an agent to look at an image (URL or local file) → asks your preferred LLM to extract structured JSON → a second function converts the JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
 
 ---
 
@@ -11,8 +11,8 @@
 |---------|---------|
 | **Image → JSON** | Uses an LLM (default: `build.nvidia.com`, easily swappable for OpenAI, etc.) to “look” at an image and answer with JSON. |
 | **Template‑driven reports** | **Report Creator** renders the JSON into eye‑catching HTML via the templates in `report_templates/`. |
-| **One‑call flexibility** | Pick any template just by passing its name as a function‑call parameter—perfect for multiple report types. |
-| **Batteries included** | Comes with a minimal but complete [AIQ](https://github.com/NVIDIA/AIQToolkit) workflow (server + UI) so you can extend the logic between “read” and “write.” |
+| **One‑call flexibility** | For multiple report types, you can pick any custom pre-setup template just by passing its name in a single function‑call parameter. |
+| **Batteries included** | Works as a complete [AIQ](https://github.com/NVIDIA/AIQToolkit) workflow, built to be a scaffolding so you can extend the logic between llm “read” and report “write.” |
 
 ---
 
