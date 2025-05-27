@@ -87,6 +87,8 @@ Reports are powered by **[Report Creator](https://report-creator.readthedocs.io
 Create new templates in `report_templates/`. Set them up in rawr_report_template.py to call them by name.
 Generated reports are saved to /report_exports as an HTML file.
 
+Click here to see "Kitchen Sink" an example of some of the widgets you can access for your own reports: **[Kitchen Sink Widget Sample](https://darenr.github.io/report_creator/)
+
 ---
 
 ## 🏗️ Build Your Own RAWR
