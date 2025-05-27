@@ -1,6 +1,8 @@
 # 🦖 **RAWR Agent – _Read And Write Report_**  
 *A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** (https://linktr.ee/JeremyKplatform) 
 
+Produced for and submitted to the Nvidia AgentIQ Hackathon 2025 - https://developer.nvidia.com/agentiq-hackathon
+
 > **TL;DR** Access the Nvidia AgentIQ chat UI locally, to prompt an agent to look at an image (URL or local file) → the first agent tool asks your preferred vision enabled LLM to extract structured JSON → a second agent tool function converts the JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
 
 ---
