@@ -1,5 +1,5 @@
 # 🦖 **RAWR Agent – _Read And Write Report_**  
-*A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** (https://linktr.ee/JeremyKplatform) 
+*A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** (https://linktr.ee/JeremyKplatform ) 
 
 Produced for and submitted to the Nvidia AgentIQ Hackathon 2025 - https://developer.nvidia.com/agentiq-hackathon
 
