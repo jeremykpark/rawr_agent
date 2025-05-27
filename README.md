@@ -1,5 +1,5 @@
 # 🦖 **RAWR Agent – _Read And Write Report_**  
-*A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** 
+*A starter workflow template for [NVIDIA AIQ Toolkit](https://github.com/NVIDIA/AIQToolkit) by **Jeremy Kesten** (https://linktr.ee/JeremyKplatform) 
 
 > **TL;DR** Access the Nvidia AgentIQ chat UI locally, to prompt an agent to look at an image (URL or local file) → the first agent tool asks your preferred vision enabled LLM to extract structured JSON → a second agent tool function converts the JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
 
@@ -75,13 +75,13 @@
 
 The default setup is to read this included sample file and create a report on the data inside.
 
-| <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="20%" height="20%"> | <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/report_demo.png" alt="Sample Report" width="30%" height="20%"> |
+| <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/birthday-party-flyer.jpg" alt="Sample Flyer" width="20%" height="20%"> | <img src="https://github.com/jeremykpark/rawr_agent/blob/main/img/report_sample.jpg" alt="Sample Report" width="30%" height="20%"> |
 
 ---
 
 ## 🧩 Template System
 
-Reports are powered by **[Report Creator](https://report-creator.readthedocs.io/en/latest/api.html)** by Daren Ace.  
+Reports are powered by **[Report Creator](https://report-creator.readthedocs.io/en/latest/api.html)** by Daren Race.  
 Create new templates in `report_templates/`. Set them up in rawr_report_template.py to call them by name.
 Generated reports are saved to /report_exports as an HTML file.
 
