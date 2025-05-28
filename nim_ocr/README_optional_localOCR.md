@@ -19,6 +19,6 @@
 * In a seperate terminal, run the imgocrtest.py script in the /nim_ocr/nim_ocr_test directory
 * This should read the birthday party flyer located in the /img directory and output an image 'detected_text_elements' that shows the bounding boxes detected, and output a json at the same time.
 
-#########
+---
 
-### This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
+> This file is from RAWR Agent - https://github.com/jeremykpark/rawr_agent
