@@ -1,5 +1,5 @@
-## ** OPTIONAL ** FOR LOCAL OCR READING ##
-Use a locally hosted NIM PADDLEOCR instance instead of an LLM for gathering image information in json
+# ** OPTIONAL ** FOR LOCAL OCR READING 
+### Use a locally hosted NIM PADDLEOCR instance instead of an LLM for gathering image information in json
 
 * Start a local NeMo Retreiver PADDLEOCR NIM server with docker, and locally read JSON data from images
 * A low VRAM OCR Solution https://catalog.ngc.nvidia.com/orgs/nim/teams/baidu/containers/paddleocr
