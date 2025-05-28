@@ -11,6 +11,7 @@ A low VRAM OCR Solution https://catalog.ngc.nvidia.com/orgs/nim/teams/baidu/cont
 
 # How to start:
 Make sure global NGC_API_KEY variable is available and video card good nvidia-smi
+Also make sure docker is logged into nvcr.io - more info on ngc.nvidia.com api keys section abou this (scroll down)
 Run Nvidia OCR Nim with docker locally, by starting the start_ocr_nim.sh file
     more info: https://docs.nvidia.com/nim/ingestion/table-extraction/latest/getting-started.html
 
