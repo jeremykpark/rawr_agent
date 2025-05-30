@@ -95,6 +95,12 @@ Click here to see "Kitchen Sink" an example of some of the widgets you can acces
 Reports are powered by **[Report Creator](https://report-creator.readthedocs.io/en/latest/api.html)** by Daren Race.  
 
 ---
+## 📽️ Walkthrough Video
+
+
+[![Walkthrough Video Youtube]()](https://www.youtube.com/watch?v=h07zOIEMiV0)
+
+---
 
 ## 🏗️ Build Your Own RAWR
 
