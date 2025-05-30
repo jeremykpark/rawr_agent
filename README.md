@@ -98,7 +98,7 @@ Reports are powered by **[Report Creator](https://report-creator.readthedocs.io
 ## 📽️ Walkthrough Video
 
 
-[![Walkthrough Video Youtube]()](https://www.youtube.com/watch?v=h07zOIEMiV0)
+[![Walkthrough Video Youtube](https://github.com/jeremykpark/rawr_agent/blob/main/img/video-screenshot.png)](https://www.youtube.com/watch?v=h07zOIEMiV0)
 
 ---
 
