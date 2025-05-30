@@ -30,9 +30,9 @@ async def rawr_image_extractor_nimocr_function(
     config: rawrImageExtractorNimOCRFunctionConfig, builder: Builder
 ):
     # Implement your function logic here
-    async def _response_fn(input_message: str) -> str:
+    async def _response_fn(input_message: str, image_source: str="img/birthday-party-flyer.jpg") -> str:
         # Encode the image provided url - if no image provided, use the included birthday party flyer
-        output_gen = run_ocr()
+        output_gen = run_ocr(image_source)
 
         return output_gen
     
@@ -102,9 +102,9 @@ def extract_text(image_data_url, api_endpoint):
     response.raise_for_status()
     return response.json()
 
-def run_ocr():
-     # Process the same sample image used in the cURL example
-    image_source = "img/birthday-party-flyer.jpg"
+def run_ocr(image_source):
+    # Process the same sample image used in the cURL example
+    # image_source = "img/birthday-party-flyer.jpg"
     # Also works with local files
     # image_source = "path/to/your/image.jpg"
     api_endpoint = "http://localhost:8010"
