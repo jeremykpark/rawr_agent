@@ -62,7 +62,7 @@
 6. **Launch the AIQ UI in a separate terminal**  
    ```bash
    cd ~/<your‑AIQtoolkit‑dir>/external/aiqtoolkit-opensource-ui
-   npm dev start
+   npm run dev
 
    # follow the official AIQ UI setup guide first - NPM version v18.17.0 or new required:
    # Ref: https://docs.nvidia.com/aiqtoolkit/latest/quick-start/launching-ui.html
