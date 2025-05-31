@@ -1,3 +1,4 @@
+LICENSE
 README.md
 pyproject.toml
 src/rawr_agent/__init__.py
