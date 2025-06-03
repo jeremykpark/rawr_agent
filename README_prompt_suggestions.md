@@ -1,7 +1,7 @@
 # Prompt Suggestions for querying the agent from the AgentIQ UI
 
 ## USING VISION LLM - Setup and run vision llm with build.nvidia.com or other provider first
-## Set the max_image_size_kb variable in config.yml to autoresize the images before reading to save tokens
+Set the max_image_size_kb variable in config.yml to autoresize the images before reading to save tokens
 
 ### Test if the vision LLM is working and reading the default local file included
 " Read the flyer and tell me when is the party "
