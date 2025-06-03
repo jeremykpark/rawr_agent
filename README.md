@@ -13,7 +13,7 @@
 
 | Feature | Details |
 |---------|---------|
-| **Image → JSON** | Uses a vision enabled LLM (default: `build.nvidia.com`, easily swappable for OpenAI, etc.) to “look” at an image and answer with JSON. Also includes example scripts for running a PaddleOCR NIM docker container, for more sensitive applications, where an external LLM is not possible. Resizes large images before scanning to save tokens. |
+| **Image → JSON** | Uses a vision enabled LLM (default: `build.nvidia.com`, easily swappable for OpenAI, etc.) to “look” at an image and answer with JSON. Also includes example scripts for running a PaddleOCR NIM docker container, for more sensitive applications, where an external LLM is not possible. Resizes large images before scanning to save tokens. Extended formats for PaddleOCR NIM - can scan JPEG, PNG, GIF, TIFF, WEBP, BMP |
 | **Template‑driven reports** | **Report Creator** renders the JSON into eye‑catching HTML via the templates in `report_templates/`. |
 | **One‑call flexibility** | For multiple report types, you can pick any custom pre-setup template just by passing its name in a single function‑call parameter. |
 | **Batteries included** | Works as a complete [AIQ](https://github.com/NVIDIA/AIQToolkit) workflow, built to be a scaffolding so you can extend the logic between a basic example of vision llm “read” and report “write.”  For instance, add an MCP extend analysis of the vision data, before writing the report. |
