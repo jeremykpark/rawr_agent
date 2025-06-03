@@ -68,7 +68,7 @@
    # Ref: https://docs.nvidia.com/aiqtoolkit/latest/quick-start/launching-ui.html
    ```
 
-6.5. ** Optional Start NimOCR server in a seperate terminal **
+6.5. ** Optional ** Start NimOCR server in a seperate terminal
    ```bash
    cd nim_ocr
    start_ocr_nim.sh
