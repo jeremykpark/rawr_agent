@@ -29,7 +29,7 @@ class rawrImageExtractorNimOCRFunctionConfig(FunctionBaseConfig, name="rawr_imag
     """
     # Add your custom configuration parameters here
     parameter: str = Field(default="default_value", description="Notional description for this parameter")
-    max_image_size: int = Field(default=100, description="Maximum image size in KB before resizing")
+    max_image_size_kb: int = Field(default=100, description="Maximum image size in KB before resizing")
 
 @register_function(config_type=rawrImageExtractorNimOCRFunctionConfig)
 async def rawr_image_extractor_nimocr_function(
@@ -38,7 +38,7 @@ async def rawr_image_extractor_nimocr_function(
     # Implement your function logic here
     async def _response_fn(input_message: str, image_source: str="img/birthday-party-flyer.jpg") -> str:
         # Encode the image provided url - if no image provided, use the included birthday party flyer
-        output_gen = run_ocr(image_source, config.max_image_size)
+        output_gen = run_ocr(image_source, config.max_image_size_kb)
 
         return output_gen
     
@@ -326,7 +326,7 @@ def extract_text(image_data_url, api_endpoint):
     response.raise_for_status()
     return response.json()
 
-def run_ocr(image_source, max_image_size=100):
+def run_ocr(image_source, max_image_size_kb=100):
     # Process the same sample image used in the cURL example
     # image_source = "img/birthday-party-flyer.jpg"
     # Also works with local files
@@ -336,7 +336,7 @@ def run_ocr(image_source, max_image_size=100):
 
     try:
         # Encode the image
-        image_data_url = encode_image(image_source, max_image_size)
+        image_data_url = encode_image(image_source, max_image_size_kb)
 
         # Detect elements
         result = extract_text(image_data_url, api_endpoint)

@@ -17,11 +17,11 @@ functions:
   rawr_image_extractor_llm:
     _type: rawr_image_extractor_llm
     llm_name: nim_llm
-    max_image_size: 100
+    max_image_size_kb: 100
     # Maximum image size in KB before resizing down to this size. Default 100kb if not specified
   rawr_image_extractor_nimocr:
     _type: rawr_image_extractor_nimocr
-    max_image_size: 200
+    max_image_size_kb: 200
     # Maximum image size in KB before resizing down to this size. Default 100kb if not specified
   rawr_report_templates:
     _type: rawr_report_templates

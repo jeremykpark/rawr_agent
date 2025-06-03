@@ -27,7 +27,7 @@ class rawrImageExtractorFunctionConfig(FunctionBaseConfig, name="rawr_image_extr
     # Add your custom configuration parameters here
     parameter: str = Field(default="default_value", description="Notional description for this parameter")
     llm_name: LLMRef = Field(description="LLM to use for extracting data from images")
-    max_image_size: int = Field(default=100, description="Maximum image size in KB before resizing")
+    max_image_size_kb: int = Field(default=100, description="Maximum image size in KB before resizing")
 
 @register_function(config_type=rawrImageExtractorFunctionConfig, framework_wrappers=[LLMFrameworkEnum.LANGCHAIN])
 async def rawr_image_extractor_llm_function(
@@ -36,7 +36,7 @@ async def rawr_image_extractor_llm_function(
     # Implement your function logic here
     async def _response_fn(context: str, image_source: str="img/birthday-party-flyer.jpg") -> str:
         # Encode the image provided url - if no image provided, use the included birthday party flyer
-        image_data_url = encode_image(image_source, config.max_image_size)
+        image_data_url = encode_image(image_source, config.max_image_size_kb)
         
         # Prepare the data for sending to the LLM
         payload = f"{context} <img src=\"{image_data_url}\" />"
