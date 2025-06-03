@@ -197,7 +197,7 @@ cython_debug/
 # Cline is an AI-powered code editor for vscode.. '.clineignore' specifies files/directories to
 #  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
 
-.clignore
+.clineignore
 .clinerules/
 clinerules-bank/
 memory-bank/
