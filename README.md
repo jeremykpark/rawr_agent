@@ -68,6 +68,12 @@
    # Ref: https://docs.nvidia.com/aiqtoolkit/latest/quick-start/launching-ui.html
    ```
 
+6.5. ** Optional Start NimOCR server in a seperate terminal **
+   ```bash
+   cd nim_ocr
+   start_ocr_nim.sh
+   ```
+
 7. **Open your browser at** <http://localhost:3000>  
    *Start chatting - test with one of the prompts in README_prompt_suggestions.md; watch the server terminals for logs/errors.*
 
