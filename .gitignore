@@ -192,3 +192,13 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Cline
+# Cline is an AI-powered code editor for vscode.. '.clineignore' specifies files/directories to
+#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
+
+.clineignore
+.clinerules/
+clinerules-bank/
+memory-bank/
+README_project_brief.md

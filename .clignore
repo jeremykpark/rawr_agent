@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build and Distribution
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+env/
+venv/
+ENV/
+.env
+.venv
+
+# IDE and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Testing and Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Temporary and System Files
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Project Specific
+# Add any project-specific files or directories to ignore here

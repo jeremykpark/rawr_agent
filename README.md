@@ -4,7 +4,7 @@
 * Produced for and submitted to the Nvidia AgentIQ Hackathon 2025 - https://developer.nvidia.com/agentiq-hackathon
 
 
-> **TL;DR** Access the Nvidia AgentIQ chat UI locally, to prompt an agent to look at an image (URL or local file) → the first agent tool asks your preferred vision enabled LLM to extract structured JSON → a second agent tool function converts the JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
+> **TL;DR** Access the Nvidia AgentIQ chat UI locally, to prompt an agent to look at an image (URL or local file) → the first agent tool asks your preferred vision enabled LLM or NimOCR to extract structured JSON → a second agent tool function converts the JSON into **Report Creator** (https://github.com/darenr/report_creator) templates → instantly get a polished, single‑file HTML report.
 
 > Recommended Viewing on Nvidia AgentIQ - https://www.youtube.com/watch?v=H65OluZaiZQ&t=153s
 ---
